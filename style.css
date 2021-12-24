@@ -746,6 +746,10 @@ footer {
   font-size: 2rem;
 }
 
+.footer-links-conecta .fa-facebook {
+  color: var(--color-neutral-light);
+}
+
 footer .navBar-link li a {
   color: var(--color-neutral-light);
 }
