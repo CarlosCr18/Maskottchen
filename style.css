@@ -949,6 +949,7 @@ footer .navBar-link li a {
   .Reviews {
     align-items: center;
     justify-content: center;
+    height:auto;
   }
 
   .Reviews h2 {
