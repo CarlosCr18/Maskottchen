@@ -1,0 +1,2 @@
+# Maskottchen
+Maskotchen webpage
