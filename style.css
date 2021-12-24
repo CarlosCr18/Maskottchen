@@ -774,6 +774,10 @@ footer .navBar-link li a {
     --font-size-text: 1rem;
   }
 
+  body {
+    scroll-snap-type: none;
+  }
+
   .header-container {
     position: fixed;
     inset: 0 30% 0 0%;
