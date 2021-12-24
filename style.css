@@ -781,6 +781,11 @@ footer .navBar-link li a {
   body {
     scroll-snap-type: none;
   }
+  
+  body * {
+    scroll-snap-align: none;
+  }
+
 
   .header-container {
     position: fixed;
