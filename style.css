@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  transition: all 0.35s ease-in-out;
 }
 
 :root {
@@ -240,6 +239,8 @@ a:hover {
   justify-content: center;
   background-color: #fff;
   z-index: -1;
+  transform: translateY(15rem);
+  opacity: 0;
 }
 
 .Inicio-text {
@@ -290,6 +291,7 @@ a:hover {
     rgba(247, 211, 157, 1) 0%,
     rgba(221, 155, 58, 0.7791317210477942) 92%
   );
+  opacity: 0;
 }
 
 .Acerca img {
@@ -334,6 +336,7 @@ a:hover {
 .Servicios-text {
   width: 50%;
   margin-bottom: 3rem;
+  opacity: 0;
 }
 
 .Servicios-text hr {
@@ -363,6 +366,9 @@ a:hover {
 
   color: var(--color-neutral-dark);
   font-size: 1.235rem;
+  transition: all 0.35s ease-in-out;
+  opacity: 0;
+  transform: translateX(-100%);
 }
 
 .Servicios-cards .card-text {
@@ -440,18 +446,26 @@ a:hover {
   align-items: center;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-  opacity: 0.9;
+  transition: all 0.35s ease-in-out;
+  opacity: 0;
 }
 
 .producto-imagen {
   display: block;
   width: auto;
+  max-width: 30%;
   height: auto;
-  max-height: 15vh;
 }
 
 .producto-text {
-  height: 100%;
+  height: 90%;
+  width: 90%;
+  margin-left: 0;
+  padding-right: 0.5rem;
+}
+
+.producto-text h3 {
+  margin-bottom: -0.5rem;
 }
 
 /*?Galeria--*/
@@ -502,6 +516,8 @@ a:hover {
   max-width: 25%;
   max-height: 75%;
   border-radius: 10%;
+  transition: all 0.35s ease-in-out;
+  opacity: 0;
 }
 
 /*?-Reviews-*/
@@ -546,6 +562,7 @@ a:hover {
   font-size: 3rem;
   color: var(--color-primary-green);
   opacity: 0.5;
+  transition: all 0.35s ease-in-out;
 }
 
 .reviews-container button:hover,
@@ -643,6 +660,7 @@ textarea {
 
   outline: none;
   opacity: 0.6;
+  transition: all 0.35s ease-in-out;
 }
 
 label {
@@ -745,7 +763,6 @@ footer {
 .footer-links-conecta .fa {
   font-size: 2rem;
 }
-
 .footer-links-conecta .fa-facebook {
   color: var(--color-neutral-light);
 }
@@ -765,8 +782,19 @@ footer .navBar-link li a {
 }
 
 .footer-language a {
-  color: var(--color-neutral-black);
   font-size: 1.3rem;
+}
+
+.english-link {
+  color: var(--color-neutral-dark);
+}
+
+.english-link:hover,
+.english-link:focus-visible {
+  color: var(--color-neutral-light);
+}
+.spanish-link {
+  color: var(--color-neutral-light);
 }
 
 /*?MEDIA CHANGE--*/
@@ -777,7 +805,15 @@ footer .navBar-link li a {
     --font-size-subtitle: 1.5rem;
     --font-size-text: 1rem;
   }
-  
+
+  body {
+    scroll-snap-type: none;
+  }
+
+  body * {
+    scroll-snap-align: none;
+  }
+
   .header-container {
     position: fixed;
     inset: 0 30% 0 0%;
@@ -949,7 +985,7 @@ footer .navBar-link li a {
   .Reviews {
     align-items: center;
     justify-content: center;
-    height:auto;
+    height: auto;
   }
 
   .Reviews h2 {

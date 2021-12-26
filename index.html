@@ -45,7 +45,7 @@
     </div>
     </header>
 
-    <main>
+    <main id="main">
       <section id="Inicio" class="Inicio"  tabindex="0">
         <div class="Inicio-text">
         <h1>Maskottchen store</h1>
@@ -186,9 +186,9 @@
       <section class="Galeria"  tabindex="0">
         <h2>Galeria</h2>
         <div class="galeria-container">
-          <img class="hover-translatey" src="img/docho.jpg" alt="imagen de muestra" />
-          <img class="hover-translatey" src="img/berlin.jpg" alt="imagen de muestra" />
-          <img class="hover-translatey" src="img/humberto.jpg" alt="imagen de muestra" />
+          <img id='galeria-img' class="hover-translatey" src="img/docho.jpg" alt="imagen de muestra" />
+          <img id='galeria-img'  class="hover-translatey" src="img/berlin.jpg" alt="imagen de muestra" />
+          <img id='galeria-img'  class="hover-translatey" src="img/humberto.jpg" alt="imagen de muestra" />
         </div>
       </section>
       <section class="Reviews"  tabindex="0">
@@ -300,11 +300,14 @@
         <p><a href="http://" tabindex="0">Sitio desarrolado por </a></p>
       </div>
       <div class="footer-language">
-        <a href="">English</a>
-        <a href="">Espanol</a>
+        <a href="" class="english-link">English</a>
+        <a href="" class="spanish-link">Espanol</a>
       </div>
     </footer>
 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script
       src="https://unpkg.com/react@17/umd/react.development.js"
@@ -315,5 +318,6 @@
       crossorigin
     ></script>
     <script src="main.js" type="text/babel" defer></script>
+    <script src="gsap.js" type="text/babel" defer></script>
   </body>
 </html>
