@@ -63,23 +63,17 @@ fadeinproducto.forEach((item, index) => {
   });
 });
 
-let fadeingaleria = gsap.utils.toArray("#galeria-img");
-
-fadeingaleria.forEach((item, index) => {
-  let t3 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".Galeria",
-      start: "top 50%", // start when top of trigger target hits 50% point of viewport
-      toggleActions: "play play none reverse",
-      end: "bottom center",
-      markers: false,
-    },
-  });
-  t3.to(item, {
-    opacity: 1,
-    duration: 0.1 * index + 0.2,
-    ease: Expo.easeOut,
-  });
+gsap.to(".Galeria", {
+  opacity: 1,
+  y: 0,
+  duration: 0.5,
+  scrollTrigger: {
+    trigger: ".Galeria",
+    start: "top-=15% center", // start when top of trigger target hits 50% point of viewport
+    toggleActions: "play play none reverse",
+    end: "bottom center",
+    markers: false,
+  },
 });
 
 /*
