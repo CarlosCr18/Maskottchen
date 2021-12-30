@@ -13,7 +13,7 @@
   --color-neutral-dark: #24292b;
   --color-neutral-black: #12191b;
   --color-primary-green: #b3f1b7;
-  --color-primary-blue: #0d9bab;
+  --color-primary-blue: #11afc0;
   --color-primary-neutral: #f7e3ad;
   --color-primary-pink: #f1b8f5;
   --font-size-title: 3rem;
@@ -51,7 +51,8 @@ input[type="number"] {
 
 .hover-background:hover,
 .hover-background:focus-visible {
-  background-color: var(--color-primary-neutral);
+  background-color: var(--color-primary-blue);
+  color: var(--color-neutral-light) !important;
   border-radius: 5%;
 }
 
@@ -309,6 +310,13 @@ a:hover {
     rgba(221, 155, 58, 0.7791317210477942) 92%
   );
   opacity: 0;
+  background-color: var(--color-neutral-blue);
+  background: linear-gradient(
+    -27deg,
+    var(--color-primary-blue) 0%,
+    var(--color-neutral-blue) 100%
+  );
+  color: var(--color-neutral-light);
 }
 
 .Acerca img {
@@ -435,20 +443,13 @@ a:hover {
   box-shadow: 0 0 2rem 3px rgba(0, 0, 0, 0.5);
 }
 
-.promocion h2 {
-  width: auto;
-  font-family: var(--font-family-Domine);
-  font-size: 2rem !important;
-  transform: translateX(100%);
-}
-
 /*?Productos--*/
 
 .Productos {
   width: 100%;
   min-height: 60vh;
   padding-bottom: 5rem;
-  scroll-snap-align: start end;
+
   position: relative;
 
   background-color: var(--color-primary-green);
@@ -456,11 +457,32 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: start;
+  text-align: center;
 }
 
-.Productos h2 {
-  font-family: var(--font-family-Lora);
+.Productos h2 span[data-lang="es"]:after {
+  content: " muchas cosas como:";
+  font-size: var(--font-size-subtitle);
+  color: var(--color-neutral-dark);
+  font-style: none;
+}
+.Productos h2 span[data-lang="en"]:after {
+  content: " a lot of stuff:";
+  font-style: none !important;
+  font-size: var(--font-size-subtitle);
+  color: var(--color-neutral-dark);
+}
+.Productos h2 span {
+  font-family: var(--font-family-Domine);
   font-size: var(--font-size-title);
+  color: var(--color-primary-blue);
+  font-style: italic;
+}
+.promocion h2 {
+  width: auto;
+  font-family: var(--font-family-Domine);
+  font-size: 2rem !important;
+  transform: translateX(100%);
 }
 
 .productos-grid {
@@ -559,6 +581,7 @@ a:hover {
 }
 
 .Galeria h2 {
+  display: none;
   padding: 0;
   margin: 0;
   padding-top: 2rem;
@@ -631,6 +654,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   padding-bottom: 5%;
 
   background-color: var(--color-neutral-blue);
@@ -646,6 +671,12 @@ a:hover {
   margin: 0;
   padding-top: 2rem;
   font-size: var(--font-size-title);
+  color: var(--color-neutral-dark);
+  transition: all 0.25s ease;
+}
+
+.Reviews h2:hover {
+  color: var(--color-neutral-light);
 }
 
 .reviews-container {
@@ -664,7 +695,7 @@ a:hover {
   background: transparent;
   border: none;
   font-size: 3rem;
-  color: var(--color-primary-green);
+  color: var(--color-neutral-light);
   opacity: 0.5;
   transition: all 0.35s ease-in-out;
 }
@@ -686,6 +717,7 @@ a:hover {
 }
 .review-text {
   font-size: var(--font-size-subtitle);
+  font-family: garamond, serif;
 }
 .review-author {
   font-size: var(--font-size-text);
@@ -741,9 +773,9 @@ a:hover {
   color: var(--color-primary-blue);
 }
 
-.contactanos-text h4 {
+.contactanos-text h3 {
   margin: 0;
-  margin-bottom: -1rem;
+  margin-bottom: -0.5rem;
   margin-top: 1rem;
   padding: 0;
 }
@@ -938,6 +970,13 @@ section {
   padding-right: 0 !important;
 }
 
+.Inicio,
+.Galeria,
+.Productos,
+.Contactanos {
+  background: #fff !important;
+}
+
 /*?MEDIA CHANGE--*/
 
 @media only screen and (min-width: 800px) and (max-width: 900px) {
@@ -1049,6 +1088,11 @@ section {
       background-color: var(--color-primary-blue);
       color: var(--color-neutral-light);
     }
+  }
+
+  .Productos h2 span[data-lang="en"]:after,
+  .Productos h2 span[data-lang="es"]:after {
+    content: "";
   }
 }
 
@@ -1227,6 +1271,11 @@ section {
     width: 5rem;
   }
 
+  .Productos h2 span[data-lang="en"]:after,
+  .Productos h2 span[data-lang="es"]:after {
+    content: "";
+  }
+
   .Galeria {
     justify-content: space-around;
     height: auto;
@@ -1257,9 +1306,13 @@ section {
     height: auto;
   }
 
+  .reviews-container button {
+    opacity: 0.8;
+  }
   .Reviews h2 {
     margin: 0;
     padding: 0;
+    padding-top: 2rem;
   }
 
   .review-title {
