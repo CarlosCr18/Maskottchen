@@ -20,7 +20,9 @@ const Review = () => {
   const [currentReview, setCurrentReview] = React.useState(0);
   let language = 0;
 
-  if (window.location.pathname === "/index.html") {
+  if (
+    document.querySelector(".english-link").getAttribute("data-lang") === "es"
+  ) {
     language = 0;
   } else {
     language = 1;

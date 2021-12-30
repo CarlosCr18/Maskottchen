@@ -7,7 +7,7 @@ gsap.to(".Acerca", {
   duration: 1,
   scrollTrigger: {
     trigger: ".Acerca",
-    start: "top-=15% center", // start when top of trigger target hits 50% point of viewport
+    start: "top+=15% bottom", // start when top of trigger target hits 50% point of viewport
     toggleActions: "play play none none",
     end: "bottom center",
     markers: false,
@@ -69,9 +69,23 @@ gsap.to(".Galeria", {
   duration: 0.5,
   scrollTrigger: {
     trigger: ".Galeria",
-    start: "top-=15% center", // start when top of trigger target hits 50% point of viewport
+    start: "top+=15% bottom", // start when top of trigger target hits 50% point of viewport
     toggleActions: "play play none reverse",
     end: "bottom center",
+    markers: false,
+  },
+});
+
+gsap.to("#promocion-text", {
+  x: "-100%",
+  duration: 10,
+  repeat: -1,
+  ease: "circ.easeInOut",
+  scrollTrigger: {
+    trigger: "#promocion-text",
+    start: "top-=600px center", // start when top of trigger target hits 50% point of viewport
+    toggleActions: "play pause play pause",
+    end: "bottom+=600px center",
     markers: false,
   },
 });
