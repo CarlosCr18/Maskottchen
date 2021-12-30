@@ -13,7 +13,7 @@ gsap.to(".Acerca", {
     markers: false,
   },
 });
-
+/** */
 gsap.to(".Servicios-text", {
   opacity: 1,
   duration: 1,
@@ -26,6 +26,7 @@ gsap.to(".Servicios-text", {
   },
 });
 
+/** */
 let fadeincard = gsap.utils.toArray(".card");
 fadeincard.forEach((item, index) => {
   let tl = gsap.timeline({
@@ -45,6 +46,7 @@ fadeincard.forEach((item, index) => {
   });
 });
 
+/** */
 let fadeinproducto = gsap.utils.toArray(".producto");
 fadeinproducto.forEach((item, index) => {
   let t2 = gsap.timeline({
@@ -63,6 +65,7 @@ fadeinproducto.forEach((item, index) => {
   });
 });
 
+/** */
 gsap.to(".Galeria", {
   opacity: 1,
   y: 0,
