@@ -310,13 +310,6 @@ a:hover {
     rgba(221, 155, 58, 0.7791317210477942) 92%
   );
   opacity: 0;
-  background-color: var(--color-neutral-blue);
-  background: linear-gradient(
-    -27deg,
-    var(--color-primary-blue) 0%,
-    var(--color-neutral-blue) 100%
-  );
-  color: var(--color-neutral-light);
 }
 
 .Acerca img {
@@ -596,6 +589,7 @@ a:hover {
   transition: all 0.35s ease-in-out;
   aspect-ratio: 1/1;
   object-fit: cover;
+  object-position: top center;
   cursor: pointer;
 }
 
@@ -604,17 +598,21 @@ a:hover {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 9999;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
 }
 .gallery-js-container button {
+  display: block;
   color: var(--color-primary-neutral);
   font-size: var(--font-size-title);
   border: none;
   background: transparent;
+  cursor: pointer;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 .gallery-js-btn-salir {
   position: fixed;
@@ -632,17 +630,17 @@ a:hover {
 }
 .gallery-js-text-img {
   color: var(--color-neutral-light);
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: center;
   justify-content: center;
-  height: auto !important;
 }
 .gallery-js-img {
   display: block;
   max-width: 80%;
-  max-height: 80%;
+  max-height: 90%;
   width: auto;
   height: auto;
 }
@@ -838,7 +836,7 @@ textarea {
   font-size: 1rem;
 
   outline: none;
-  opacity: 0.5;
+  opacity: 0.8;
   transition: all 0.5s;
   letter-spacing: 0.2rem;
 }
@@ -913,7 +911,12 @@ footer {
 .footer-navbar * a {
   font-size: var(--font-size-text);
 }
-
+.link-developer {
+  color: var(--color-neutral-light);
+  text-decoration: none;
+  font-style: italic;
+  opacity: 1;
+}
 .footer-links-conecta .fa {
   font-size: 2rem;
 }
@@ -937,15 +940,16 @@ footer .navBar-link li a {
 
 .footer-language a {
   font-size: 1.3rem;
+  opacity: 1;
 }
 
 .english-link:hover,
 .english-link:focus-visible {
-  color: var(--color-neutral-light);
+  color: #fff;
 }
 
 .english-link[data-lang="es"] {
-  color: var(--color-neutral-dark);
+  color: #000;
 }
 .spanish-link[data-lang="es"] {
   color: var(--color-neutral-light);
@@ -1213,7 +1217,7 @@ section {
     height: 100vh;
   }
   .Inicio h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .Acerca {
@@ -1228,9 +1232,13 @@ section {
   }
 
   .Acerca img {
-    margin-left: auto;
+    margin: 0 auto;
+    padding: 0 !important;
     margin-bottom: 4rem;
+    max-width: 80%;
+    min-width: 60%;
   }
+
   .Acerca-text {
     width: 100%;
     margin-left: auto;
@@ -1293,11 +1301,36 @@ section {
     max-width: 50%;
     padding: 0;
   }
-  .gallery-js-container {
+
+  .gallery-js-container button {
+    position: absolute;
+    color: #fff !important;
+
+    -webkit-text-stroke: 1px black;
+  }
+  .gallery-js-btn-anterior {
+    left: 1rem;
+    font-size: 5rem !important;
+  }
+  .gallery-js-btn-siguiente {
+    right: 1rem;
+    font-size: 5rem !important;
+  }
+  .gallery-js-text-img {
+    color: var(--color-neutral-light);
+    height: 100%;
+    display: flex;
     flex-direction: column;
+    gap: 0.5rem;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+  }
+  .gallery-js-img {
+    display: block;
+    max-width: 100%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
   }
 
   .Reviews {

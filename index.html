@@ -10,61 +10,136 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pagina web para tienda y estetica para mascotas,
+       se pueden encontrar alimentos para mascota, platos para mascotas,
+        accesorios para mascotas, camas para mascotas, asi como el servicio 
+        de estetica y la ubicacion de maskottchen en san miguel de allende"
+    />
     <title>Maskottchen store</title>
   </head>
   <body>
     <header>
       <button class="burgerMenu">☰</button>
       <div class="header-container" data-visible="false">
-      <div class="top-information" >
-        <div class="top-information-div push-left">
-          <a href="#Contactanos" tabindex="0" id="Ciudad">San Miguel de Allende</a>
-          <a href="" tabindex="0"><icon class="fa fa-facebook"></icon></a>
-          <a href="" tabindex="0"><icon class="fa fa-twitter"></icon></a>
-          <a href="" tabindex="0"><icon class="fa fa-instagram"></icon></a>
-          <a href="" tabindex="0"><icon class="fa fa-whatsapp"></icon></a>
+        <div class="top-information">
+          <div class="top-information-div push-left">
+            <a href="#Contactanos" tabindex="0" id="Ciudad"
+              >San Miguel de Allende</a
+            >
+            <a
+              href="https://www.facebook.com/MaskottchenStore/#"
+              tabindex="0"
+              aria-label="link to facebook"
+              ><icon class="fa fa-facebook"></icon
+            ></a>
+            <a href="" tabindex="0" aria-label="link to twitter"
+              ><icon class="fa fa-twitter" aria-hidden="true"></icon
+            ></a>
+            <a
+              href="https://www.instagram.com/maskottchenstore/"
+              tabindex="0"
+              aria-label="link to instagram"
+              ><icon class="fa fa-instagram" aria-hidden="true"></icon
+            ></a>
+            <a
+              href="https://wa.me/1XXXXXXXXXX"
+              tabindex="0"
+              aria-label="link to whatsapp"
+              ><icon class="fa fa-whatsapp" aria-hidden="true"></icon
+            ></a>
+          </div>
+          <div class="top-information-div push-right">
+            <a href="http://" tabindex="0"
+              ><icon class="fa fa-phone"></icon> 4151111111</a
+            >
+            <a href="http://" tabindex="0" id="Email"
+              ><icon class="fa fa-envelope"></icon> maskottchen@gmail.com</a
+            >
+          </div>
         </div>
-        <div class="top-information-div push-right">
 
-          <a href="http://"  tabindex="0" ><icon class="fa fa-phone"></icon> 4151111111</a>
-          <a href="http://"  tabindex="0" id="Email"><icon class="fa fa-envelope"></icon> maskottchen@gmail.com</a
-          >
-        </div>
-      </div>
-
-      <nav class="navBar">
+        <nav class="navBar">
           <img class="navBar-img push-left" src="img/logo-png.png" alt="logo" />
-        <ul class="navBar-link">
-          <li><a class="hover-color hover-translatey" href="#Inicio" onclick="changeData()">Inicio</a></li>
-          <li><a class="hover-color hover-translatey" href="#Acerca" onclick="changeData()">Acerca</a></li>
-          <li><a class="hover-color hover-translatey" href="#Servicios" onclick="changeData()">Servicios</a></li>
-          <li><a class="hover-color hover-translatey" href="#Productos" onclick="changeData()">Productos</a></li>
-          <li><a class="hover-color hover-translatey" href="#Contactanos" onclick="changeData()">Contactanos</a></li>
-        </ul>
-      </nav>
-    </div>
+          <ul class="navBar-link">
+            <li>
+              <a
+                class="hover-color hover-translatey"
+                href="#Inicio"
+                onclick="changeData()"
+                >Inicio</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover-color hover-translatey"
+                href="#Acerca"
+                onclick="changeData()"
+                >Acerca</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover-color hover-translatey"
+                href="#Servicios"
+                onclick="changeData()"
+                >Servicios</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover-color hover-translatey"
+                href="#Productos"
+                onclick="changeData()"
+                >Productos</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover-color hover-translatey"
+                href="#Contactanos"
+                onclick="changeData()"
+                >Contactanos</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <div id="gallery" class="js-gallery"></div>
     <main id="main">
-      <section id="Inicio" class="Inicio"  tabindex="0">
+      <section id="Inicio" class="Inicio" tabindex="0">
         <div class="Inicio-text">
-        <h1>Maskottchen store</h1>
-        <p><i>Dejanos consentir a tus
-        <span class="Inicio-text-slogan">maskottchen</span></i></p>
+          <h1>Maskottchen store</h1>
+          <p>
+            <i
+              >Dejanos consentir a tus
+              <span class="Inicio-text-slogan">maskottchen</span></i
+            >
+          </p>
         </div>
-        <img src="img/banner.jpg" alt="banner" />
+        <img src="img/banner.webp" alt="banner" loading="lazyLoading" />
       </section>
-      <section id="Acerca" class="Acerca"  tabindex="0">
+      <section id="Acerca" class="Acerca" tabindex="0">
         <div class="Acerca-text push-left">
           <h2>Acerca de nosotros</h2>
           <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo voluptates quod ad ratione odit. Quaerat iusto cum dolor expedita! Illum ipsum neque velit rem iusto voluptate nemo praesentium! Facilis inventore optio officiis molestias ipsam qui in numquam animi amet fuga!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+            voluptates quod ad ratione odit. Quaerat iusto cum dolor expedita!
+            Illum ipsum neque velit rem iusto voluptate nemo praesentium!
+            Facilis inventore optio officiis molestias ipsam qui in numquam
+            animi amet fuga!
           </p>
         </div>
-        <img src="img/rammstein.jpg" alt="perro de muestra" />
+        <img
+          src="img/rammstein.webp"
+          alt="perro de muestra"
+          loading="lazyLoading"
+        />
       </section>
-      <section id="Servicios" class="Servicios"  tabindex="0">
+      <section id="Servicios" class="Servicios" tabindex="0">
         <div class="Servicios-text">
           <h2>Bienvenido al club</h2>
           <hr />
@@ -78,52 +153,55 @@
         <div class="Servicios-cards">
           <div class="card hover-background">
             <img
-              src="img/grooming-icon-0.png"
+              src="img/grooming-icon-0.webp"
               alt="imagen que muestra el servicio de grooming"
             />
             <div class="card-text">
-            <h3>Grooming</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-              inventore possimus nostrum!
-            </p>
+              <h3>Grooming</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam inventore possimus nostrum!
+              </p>
             </div>
           </div>
-        <div class="card hover-background">
-          <img
-            src="img/grooming-icon-1.png"
-            alt="imagen que muestra el servicio de Vestuarios"
-          />
-          <div class="card-text">
-          <h3>Vestuarios</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            inventore possimus nostrum!
-          </p></div>
-        </div>
-        <div class="card hover-background">
-          <img
-            src="img/grooming-icon-0.png"
-            alt="imagen que muestra el servicio de extras"
-          />
-          <div class="card-text">
-          <h3>Proximamente</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            inventore possimus nostrum!
-          </p>
+          <div class="card hover-background">
+            <img
+              src="img/grooming-icon-1.webp"
+              alt="imagen que muestra el servicio de Vestuarios"
+            />
+            <div class="card-text">
+              <h3>Vestuarios</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam inventore possimus nostrum!
+              </p>
+            </div>
+          </div>
+          <div class="card hover-background">
+            <img
+              src="img/grooming-icon-0.webp"
+              alt="imagen que muestra el servicio de extras"
+            />
+            <div class="card-text">
+              <h3>Proximamente</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam inventore possimus nostrum!
+              </p>
+            </div>
           </div>
         </div>
-    </div>
       </section>
-      <section id="Productos" class="Productos"  tabindex="0">
+      <section id="Productos" class="Productos" tabindex="0">
         <div class="promocion">
-          <h2 id='promocion-text'>Martes y jueves 20% de descuento en chihuahauas</h2>
+          <h2 id="promocion-text">
+            Martes y jueves 20% de descuento en chihuahauas
+          </h2>
         </div>
         <h2><span data-lang="es"> Visitanos y encuentra</span></h2>
         <div class="productos-grid">
           <div class="producto hover-scaleup hover-boxshadow">
-            <img class="producto-imagen" src="img/dogfood.jpg" />
+            <img class="producto-imagen" src="img/dogfood.webp" alt="dogfood" />
             <div class="producto-text">
               <h3>Comida</h3>
               <p>
@@ -132,8 +210,12 @@
               </p>
             </div>
           </div>
-          <div class="producto hover-scaleup  hover-opacity hover-boxshadow">
-            <img class="producto-imagen" src="img/dogplates.webp" />
+          <div class="producto hover-scaleup hover-opacity hover-boxshadow">
+            <img
+              class="producto-imagen"
+              src="img/dogplates.webp"
+              alt="dogplates"
+            />
             <div class="producto-text">
               <h3>Recipientes</h3>
               <p>
@@ -142,8 +224,12 @@
               </p>
             </div>
           </div>
-          <div class="producto hover-scaleup  hover-opacity hover-boxshadow">
-            <img class="producto-imagen" src="img/dogaccesories.webp" />
+          <div class="producto hover-scaleup hover-opacity hover-boxshadow">
+            <img
+              class="producto-imagen"
+              src="img/dogaccesories.webp"
+              alt="dog accesories"
+            />
             <div class="producto-text">
               <h3>Accesorios</h3>
               <p>
@@ -152,8 +238,12 @@
               </p>
             </div>
           </div>
-          <div class="producto hover-scaleup  hover-opacity hover-boxshadow">
-            <img class="producto-imagen" src="img/dogbrush.jpg" />
+          <div class="producto hover-scaleup hover-opacity hover-boxshadow">
+            <img
+              class="producto-imagen"
+              src="img/dogbrush.webp"
+              alt="dog brush"
+            />
             <div class="producto-text">
               <h3>Cepillos</h3>
               <p>
@@ -162,8 +252,8 @@
               </p>
             </div>
           </div>
-          <div class="producto hover-scaleup  hover-opacity hover-boxshadow">
-            <img class="producto-imagen" src="img/dogbed.jpg" />
+          <div class="producto hover-scaleup hover-opacity hover-boxshadow">
+            <img class="producto-imagen" src="img/dogbed.webp" alt="dog bed" />
             <div class="producto-text">
               <h3>Camas</h3>
               <p>
@@ -172,8 +262,12 @@
               </p>
             </div>
           </div>
-          <div class="producto hover-scaleup  hover-opacity hover-boxshadow">
-            <img class="producto-imagen" src="img/dogtreats.jpg" />
+          <div class="producto hover-scaleup hover-opacity hover-boxshadow">
+            <img
+              class="producto-imagen"
+              src="img/dogtreats.webp"
+              alt="dog treats"
+            />
             <div class="producto-text">
               <h3>Golosinas</h3>
               <p>
@@ -184,120 +278,166 @@
           </div>
         </div>
       </section>
-      <section class="Galeria"  tabindex="0">
+      <section class="Galeria" tabindex="0">
         <h2>Galeria</h2>
         <div id="gallery-section"></div>
       </section>
-      <section class="Reviews"  tabindex="0">
+      <section class="Reviews" tabindex="0">
         <h2>Los maskottchen hablan!</h2>
-        <div class="reviews-container" >
-          <button type="button" class="review-btn-anterior" id='review-btn-anterior'>˂</button>
-          <div id="review-container">
-
-          </div>
-          <button type="button" class="review-btn-siguiente" id="review-btn-siguiente">˃</button>
+        <div class="reviews-container">
+          <button
+            type="button"
+            class="review-btn-anterior"
+            id="review-btn-anterior"
+          >
+            ˂
+          </button>
+          <div id="review-container"></div>
+          <button
+            type="button"
+            class="review-btn-siguiente"
+            id="review-btn-siguiente"
+          >
+            ˃
+          </button>
         </div>
       </section>
-      <section id="Contactanos" class="Contactanos"  tabindex="0">
-          <h2>Contactanos</h2>
-          <div class="contactanos-container">
-        <div>
-          <div class="contactanos-text-align">
-            <div class="contactanos-icon">
-              <icon class="fa fa-map-marker"></icon>
-            </div>
-            <div class="contactanos-text">
+      <section id="Contactanos" class="Contactanos" tabindex="0">
+        <h2>Contactanos</h2>
+        <div class="contactanos-container">
+          <div>
+            <div class="contactanos-text-align">
+              <div class="contactanos-icon">
+                <icon class="fa fa-map-marker"></icon>
+              </div>
+              <div class="contactanos-text">
                 <h3>Direccion</h3>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque,
-                debitis.
-              </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Atque, debitis.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="contactanos-text-align">
-            <div class="contactanos-icon">
-              <icon class="fa fa-envelope"></icon>
-            </div>
-            <div class="contactanos-text">
+            <div class="contactanos-text-align">
+              <div class="contactanos-icon">
+                <icon class="fa fa-envelope"></icon>
+              </div>
+              <div class="contactanos-text">
                 <h3>Correo electronico</h3>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque,
-                debitis.
-              </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Atque, debitis.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="contactanos-text-align">
-            <div class="contactanos-icon">
+            <div class="contactanos-text-align">
+              <div class="contactanos-icon">
                 <icon class="fa fa-whatsapp"></icon>
-            </div>
-            <div class="contactanos-text">
+              </div>
+              <div class="contactanos-text">
                 <h3>whatsapp</h3>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque,
-                debitis.
-              </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Atque, debitis.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="contactanos-text-align">
-            <div class="contactanos-icon">
-              <icon class="fa fa-clock-o"></icon>
-            </div>
-            <div class="contactanos-text">
+            <div class="contactanos-text-align">
+              <div class="contactanos-icon">
+                <icon class="fa fa-clock-o"></icon>
+              </div>
+              <div class="contactanos-text">
                 <h3>Horarios</h3>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque,
-                debitis.
-              </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Atque, debitis.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <form class="contactanos-form">
+          <form class="contactanos-form">
             <label>Nombre</label>
-          <input type="text" placeholder="Nombre" required />
-          <label>Telefono</label>
-          <input type="number" placeholder="Telefono" required />
-          <label>Email</label>
-          <input type="email" placeholder="email" required />
-          <label>Dejanos un mensaje</label>
-          <textarea
-            class="contactanos-form-textarea"
-            placeholder="tu mensaje"
-            required
-          ></textarea>
-          <button>Enviar</button>
-        </form>
-          </div>
+            <input type="text" placeholder="Nombre" required />
+            <label>Telefono</label>
+            <input type="number" placeholder="Telefono" required />
+            <label>Email</label>
+            <input type="email" placeholder="email" required />
+            <label>Dejanos un mensaje</label>
+            <textarea
+              class="contactanos-form-textarea"
+              placeholder="tu mensaje"
+              required
+            ></textarea>
+            <button>Enviar</button>
+          </form>
+        </div>
       </section>
     </main>
 
-    <footer  tabindex="0"> 
+    <footer tabindex="0">
       <div class="footer-links">
         <ul class="navBar-link footer-navbar">
-            <li ><a class="hover-color hover-translatey" href="#Inicio">Inicio</a></li>
-            <li><a class="hover-color hover-translatey" href="#Acerca">Acerca</a></li>
-            <li><a class="hover-color hover-translatey" href="#Servicios">Servicios</a></li>
-            <li><a class="hover-color hover-translatey" href="#Productos">Productos</a></li>
-            <li><a class="hover-color hover-translatey" href="#Contactanos">Contactanos</a></li>
+          <li>
+            <a class="hover-color hover-translatey" href="#Inicio">Inicio</a>
+          </li>
+          <li>
+            <a class="hover-color hover-translatey" href="#Acerca">Acerca</a>
+          </li>
+          <li>
+            <a class="hover-color hover-translatey" href="#Servicios"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a class="hover-color hover-translatey" href="#Productos"
+              >Productos</a
+            >
+          </li>
+          <li>
+            <a class="hover-color hover-translatey" href="#Contactanos"
+              >Contactanos</a
+            >
+          </li>
         </ul>
         <div class="footer-links-conecta">
-          <a href="http://"  tabindex="0"><icon class="fa fa-facebook"></i></a>
-          <a href="http://"  tabindex="0"><icon class="fa fa-twitter"></icon></a>
-          <a href="http://"  tabindex="0"><icon class="fa fa-instagram"></icon></a>
-          <a href="http://"  tabindex="0"><icon class="fa fa-whatsapp"></icon></a>
+          <a
+            href="https://www.facebook.com/MaskottchenStore/#"
+            tabindex="0"
+            aria-label="link to facebook"
+            ><icon class="fa fa-facebook"></icon
+          ></a>
+          <a href="" tabindex="0" aria-label="link to twitter"
+            ><icon class="fa fa-twitter" aria-hidden="true"></icon
+          ></a>
+          <a
+            href="https://www.instagram.com/maskottchenstore/"
+            tabindex="0"
+            aria-label="link to instagram"
+            ><icon class="fa fa-instagram" aria-hidden="true"></icon
+          ></a>
+          <a
+            href="https://wa.me/1XXXXXXXXXX"
+            tabindex="0"
+            aria-label="link to whatsapp"
+            ><icon class="fa fa-whatsapp" aria-hidden="true"></icon
+          ></a>
         </div>
       </div>
       <div class="copyright">
         &copy; Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure
         facilis corrupti incidunt.
-        <p><a href="http://" tabindex="0">Sitio desarrolado por </a></p>
+        <p>
+          <a href="http://" tabindex="0" class="link-developer"
+            >Sitio desarrolado por
+          </a>
+        </p>
       </div>
       <div class="footer-language">
         <a href="/en.html" class="english-link" data-lang="es">English</a>
-        <a href="/index.html" class="spanish-link"  data-lang="es">Espanol</a>
+        <a href="/index.html" class="spanish-link" data-lang="es">Espanol</a>
       </div>
     </footer>
 
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>

@@ -1,12 +1,18 @@
 const galleryData = [
   {
-    url: "img/docho.jpg",
+    url: "img/docho.webp",
   },
   {
-    url: "img/berlin.jpg",
+    url: "img/berlin.webp",
   },
   {
-    url: "img/humberto.jpg",
+    url: "img/humberto.webp",
+  },
+  {
+    url: "img/blackdog.webp",
+  },
+  {
+    url: "img/browndog.webp",
   },
 ];
 
@@ -21,26 +27,16 @@ const Gallery = () => {
 
   React.useEffect(() => {
     setTimeout(() => {
-      document
-        .getElementById("imgGaleria0")
-        .addEventListener("click", () => showImage(0));
-      document
-        .getElementById("imgGaleria1")
-        .addEventListener("click", () => showImage(1));
-      document
-        .getElementById("imgGaleria2")
-        .addEventListener("click", () => showImage(2));
+      let galleryImage = document.querySelectorAll(".galeria-img");
+      galleryImage.forEach((element, index) => {
+        element.addEventListener("click", () => showImage(index));
+      });
     }, 10);
     return function cleanup() {
-      document
-        .getElementById("imgGaleria0")
-        .removeEventListener("click", showImage);
-      document
-        .getElementById("imgGaleria1")
-        .removeEventListener("click", showImage);
-      document
-        .getElementById("imgGaleria2")
-        .removeEventListener("click", showImage);
+      let galleryImage = document.querySelectorAll(".galeria-img");
+      galleryImage.forEach((element, index) => {
+        element.removeEventListener("click", () => showImage(index));
+      });
     };
   }, [show]);
 
@@ -60,6 +56,7 @@ const Gallery = () => {
         <div className="gallery-js-text-img">
           <img
             className="gallery-js-img"
+            alt="Imagen de muestra tamano real"
             src={galleryData[index % galleryData.length].url}
           />
           {(index % galleryData.length) + 1} / {galleryData.length}
@@ -87,26 +84,21 @@ const Gallery = () => {
   }
 };
 const GallerySection = () => {
+  let sliceLimit =
+    document.getElementsByTagName("Body")[0].clientWidth < 815 ? 3 : 5;
+
   return (
     <div className="galeria-container">
-      <img
-        id="imgGaleria0"
-        className="hover-translatey galeria-img"
-        src={galleryData[0].url}
-        alt="imagen de muestra"
-      />
-      <img
-        id="imgGaleria1"
-        className="hover-translatey galeria-img"
-        src={galleryData[1].url}
-        alt="imagen de muestra"
-      />
-      <img
-        id="imgGaleria2"
-        className="hover-translatey galeria-img"
-        src={galleryData[2].url}
-        alt="imagen de muestra"
-      />
+      {galleryData.slice(0, sliceLimit).map((galleryData, index) => (
+        <img
+          id={"imgGaleria" + index}
+          key={galleryData.url}
+          className="hover-translatey galeria-img"
+          src={galleryData.url}
+          alt={"imagen de muestra" + index}
+          loading="lazyLoading"
+        />
+      ))}
     </div>
   );
 };
