@@ -51,14 +51,10 @@ input[type="number"] {
 
 .hover-background:hover,
 .hover-background:focus-visible {
-  background-color: var(--color-primary-neutral);
-
-  background: linear-gradient(
-    180deg,
-    var(--color-primary-neutral) 50%,
-    var(--color-neutral-neutral) 75%
-  );
-  border-radius: 5%;
+  background: #fff;
+  transform: translatey(-2rem) !important;
+  border-radius: 10%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .hover-scaleup:hover,
@@ -314,6 +310,8 @@ a:hover {
     rgba(221, 155, 58, 0.7791317210477942) 92%
   );
   opacity: 0;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .Acerca img {
@@ -327,17 +325,13 @@ a:hover {
 
 .Acerca-text {
   display: block;
-  text-align: center;
+  text-align: start;
   width: 50%;
   margin-left: 2rem;
   margin-right: auto;
-  font-family: var(--font-family-indie);
+  font-family: var(--font-family-Domine);
   font-weight: 600;
   letter-spacing: 2px;
-}
-
-.Acerca-text p {
-  font-size: var(--font-size-text);
 }
 
 /*?Servicios--*/
@@ -366,6 +360,10 @@ a:hover {
   opacity: 0;
 }
 
+.Servicios-text p {
+  font-size: 1.1rem;
+}
+
 .Servicios-text hr {
   width: 33vw;
   color: var(--color-neutral-neutral);
@@ -388,6 +386,7 @@ a:hover {
 
 .Servicios-cards .card {
   width: max(27%, 20rem);
+  min-height: 45vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -396,7 +395,15 @@ a:hover {
   font-size: 1.235rem;
   opacity: 0;
   transform: translateX(-100%);
-  transition: all 1s ease;
+  transition: all 0.5s ease;
+
+  border-radius: 10%;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.Servicios-cards .card:hover > img {
+  border-radius: 15%;
 }
 
 .Servicios-cards .card-text {
@@ -408,15 +415,19 @@ a:hover {
   width: 50%;
   height: auto;
   border-radius: 50%;
+  transition: all 0.5s ease;
 }
 
 .Servicios-cards h3 {
+  font-size: 1.325rem;
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
 .Servicios-cards p {
   padding-inline: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
 }
 
 /*?--Promociones*/
@@ -479,7 +490,7 @@ a:hover {
   width: auto;
   font-family: var(--font-family-Domine);
   font-size: 2rem !important;
-  transform: translateX(100%);
+  transform: translateX(75%);
 }
 
 .productos-grid {
@@ -610,14 +621,23 @@ a:hover {
 }
 .gallery-js-container button {
   display: block;
-  color: var(--color-primary-neutral);
+  color: #fff !important;
+  -webkit-text-stroke: 1px black;
   font-size: var(--font-size-title);
   border: none;
   background: transparent;
   cursor: pointer;
   margin: 0 !important;
   padding: 0 !important;
+  transition: all 0.35s ease-in-out !important;
 }
+
+.gallery-js-container button:hover,
+.gallery-js-container button:focus-visible {
+  transform: scale(1.05) !important;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
 .gallery-js-btn-salir {
   position: fixed;
   top: 2rem;
@@ -627,11 +647,16 @@ a:hover {
 .gallery-js-btn-anterior {
   margin-left: 0;
   font-size: 5rem !important;
+  width: 25%;
+  height: 100%;
 }
 .gallery-js-btn-siguiente {
   margin-right: 0;
   font-size: 5rem !important;
+  width: 25%;
+  height: 100%;
 }
+
 .gallery-js-text-img {
   color: var(--color-neutral-light);
   height: 100%;
@@ -640,6 +665,7 @@ a:hover {
   gap: 0.5rem;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 .gallery-js-img {
   display: block;
@@ -700,6 +726,7 @@ a:hover {
   color: var(--color-neutral-dark);
   opacity: 0.5;
   transition: all 0.35s ease-in-out;
+  cursor: pointer;
 }
 
 .reviews-container button:hover,
@@ -801,6 +828,29 @@ a:hover {
   align-items: start;
   justify-content: start;
   gap: 1rem;
+  text-align: center;
+}
+
+#submitLoading {
+  display: none;
+  animation-name: jump;
+  position: relative;
+  transition: all 1s;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  margin: 0 auto;
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
 }
 
 input,
@@ -827,6 +877,10 @@ textarea {
   resize: none;
 }
 
+#formSent {
+  display: none;
+}
+
 .contactanos-form button {
   width: max(15%, 6rem);
   height: 2.5rem;
@@ -843,6 +897,7 @@ textarea {
   opacity: 0.8;
   transition: all 0.5s;
   letter-spacing: 0.2rem;
+  cursor: pointer;
 }
 .contactanos-form button::after {
   position: absolute;
@@ -920,7 +975,15 @@ footer {
   text-decoration: none;
   font-style: italic;
   opacity: 1;
+  transition: all 0.35s ease-in-out;
 }
+
+.link-developer:hover,
+.link-developer:focus-visible {
+  color: var(--color-neutral-green);
+  transform: translateY(-0.25rem);
+}
+
 .footer-links-conecta .fa {
   font-size: 2rem;
 }
@@ -1090,22 +1153,38 @@ section {
     justify-content: center;
   }
 
+  .Inicio img {
+    margin-top: 1rem;
+  }
+
   @media (hover: none) {
     .Servicios-cards .card {
-      background-color: var(--color-primary-neutral);
+      background-color: #fff;
 
-      background: linear-gradient(
-        180deg,
-        var(--color-primary-neutral) 50%,
-        var(--color-neutral-neutral) 75%
-      );
       border-radius: 5%;
+      min-height: 37vh !important;
+    }
+
+    .Servicios-cards .card img {
+      border-radius: 15%;
     }
   }
 
   .Productos h2 span[data-lang="en"]:after,
   .Productos h2 span[data-lang="es"]:after {
     content: "";
+  }
+
+  .promocion h2 {
+    width: auto;
+    font-family: var(--font-family-Domine);
+    font-size: 2rem !important;
+    transform: translateX(100%);
+  }
+  .gallery-js-container button {
+    color: #fff !important;
+    width: 25%;
+    -webkit-text-stroke: 1px black;
   }
 }
 
@@ -1230,6 +1309,10 @@ section {
     font-size: 4rem;
   }
 
+  .Inicio img {
+    margin-top: 0.5rem;
+  }
+
   .Acerca {
     height: auto;
     scroll-snap-align: center;
@@ -1272,25 +1355,19 @@ section {
     align-items: start;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .Servicios-cards .card {
-    background-color: var(--color-primary-neutral);
-
-    background: linear-gradient(
-      180deg,
-      var(--color-primary-neutral) 50%,
-      var(--color-neutral-neutral) 75%
-    );
     border-radius: 5%;
+    min-height: 40vh !important;
   }
 
   .Servicios-cards .card-text {
     height: auto;
   }
   .Servicios-cards img {
-    width: 5rem;
+    width: 10rem;
   }
 
   .Productos h2 span[data-lang="en"]:after,
@@ -1318,9 +1395,8 @@ section {
 
   .gallery-js-container button {
     position: absolute;
-    color: #fff !important;
-
-    -webkit-text-stroke: 1px black;
+    width: auto;
+    height: auto;
   }
   .gallery-js-btn-anterior {
     left: 1rem;

@@ -79,8 +79,11 @@ gsap.to(".Galeria", {
   },
 });
 
+let promocionWidth =
+  document.getElementsByTagName("Body")[0].clientWidth < 815 ? "-100%" : "-75%";
+
 gsap.to("#promocion-text", {
-  x: "-100%",
+  x: promocionWidth,
   duration: 10,
   repeat: -1,
   ease: "circ.easeInOut",

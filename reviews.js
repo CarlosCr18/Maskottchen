@@ -1,16 +1,37 @@
 const reviewsData = [
   [
-    { review: "primera review en espanol", author: "senora de los gatos 1" },
-    { review: "segunda review en espanol", author: "senora de los perros 2" },
     {
-      review: "tercera review en espanol",
-      author: "senora de los tlacuaches 3",
+      review:
+        "Gran servicio! lleve a mi chaparrito a un servicio de baño completo y esta super limpio y huele muy bien!.",
+      author: "Carlos Crespo y Docho",
+    },
+    {
+      review:
+        "Vine con mi perrita pastor australiana a servicio completo con corte de pelo y me sorprendi bastante del cambio. Excelente trato, muy amable y profesional.",
+      author: "Zayra Rodarte y Berlin",
+    },
+    {
+      review:
+        "Le compre una camisita a mi Humberto, le quedo perfecta se ve super fresco y coqueto! excelente calidad y precio!.",
+      author: "Miranda Lopez y Humberto",
     },
   ],
   [
-    { review: "first review in english", author: "cat lady 1" },
-    { review: "second review in english", author: "dog lady 2" },
-    { review: "third review in english", author: "opossum lady 3" },
+    {
+      review:
+        "Great service! I brought my doggie to get the full bath service, He is so clean and smells so good!",
+      author: "Carlos Crespo y Docho",
+    },
+    {
+      review:
+        "I came with my australian shepherd for a full service with haircut, I was astonished with her looks. Excelent service, very kind and profesional.",
+      author: "Zayra Rodarte y Berlin",
+    },
+    {
+      review:
+        "I bought a shirt for my Humberto, It fits him perfectly, he looks so fresh and handsome! It's made with an excellent quality and price.",
+      author: "Miranda Lopez y Humberto",
+    },
   ],
 ];
 
