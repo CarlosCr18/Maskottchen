@@ -35,12 +35,11 @@ const reviewsData = [
   ],
 ];
 
-let language = 0;
-
 const Review = () => {
   const [currentReview, setCurrentReview] = React.useState(0);
   let language = 0;
 
+  //sets language
   if (
     document.querySelector(".english-link").getAttribute("data-lang") === "es"
   ) {
@@ -49,6 +48,7 @@ const Review = () => {
     language = 1;
   }
 
+  //loads previous review
   function btnAnterior() {
     if (currentReview > 0) {
       setCurrentReview(currentReview - 1);
@@ -57,6 +57,7 @@ const Review = () => {
     }
   }
 
+  //loads next review
   function btnSiguiente() {
     if (currentReview < reviewsData[language].length - 1) {
       setCurrentReview(currentReview + 1);
@@ -65,6 +66,7 @@ const Review = () => {
     }
   }
 
+  //Function to add listeners to the buttons to change the review
   React.useEffect(() => {
     document
       .getElementById("review-btn-anterior")

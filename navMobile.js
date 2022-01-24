@@ -1,6 +1,9 @@
+//mobile navbar javascript
+
 const primaryNav = document.querySelector(".header-container");
 const navToggle = document.querySelector(".burgerMenu");
 
+//show or hide mobile navbar
 navToggle.addEventListener("click", () => {
   const visibility = primaryNav.getAttribute("data-visible");
 
@@ -13,6 +16,7 @@ navToggle.addEventListener("click", () => {
   }
 });
 
+//close navbar when element is clicked
 function changeData() {
   primaryNav.setAttribute("data-visible", false);
   navToggle.innerHTML = "&#9776;";

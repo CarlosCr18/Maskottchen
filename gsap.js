@@ -7,7 +7,7 @@ gsap.to(".Acerca", {
   duration: 1,
   scrollTrigger: {
     trigger: ".Acerca",
-    start: "top+=15% bottom", // start when top of trigger target hits 50% point of viewport
+    start: "top+=15% bottom",
     toggleActions: "play play none none",
     end: "bottom center",
     markers: false,
@@ -19,7 +19,7 @@ gsap.to(".Servicios-text", {
   duration: 1,
   scrollTrigger: {
     trigger: ".Servicios",
-    start: "top-=30% center", // start when top of trigger target hits 50% point of viewport
+    start: "top-=30% center",
     toggleActions: "play play none reverse",
     end: "bottom center",
     markers: false,
@@ -32,7 +32,7 @@ fadeincard.forEach((item, index) => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: item,
-      start: "top-=50% 50%", // start when top of trigger target hits 50% point of viewport
+      start: "top-=50% 50%",
       toggleActions: "play play none reverse",
       end: "bottom center",
       markers: false,
@@ -52,7 +52,7 @@ fadeinproducto.forEach((item, index) => {
   let t2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".Productos",
-      start: "top+=17% 50%", // start when top of trigger target hits 50% point of viewport
+      start: "top+=17% 50%",
       toggleActions: "play play none reverse",
       end: "bottom center",
       markers: false,
@@ -72,7 +72,7 @@ gsap.to(".Galeria", {
   duration: 0.5,
   scrollTrigger: {
     trigger: ".Galeria",
-    start: "top+=15% bottom", // start when top of trigger target hits 50% point of viewport
+    start: "top+=15% bottom",
     toggleActions: "play play none reverse",
     end: "bottom center",
     markers: false,
@@ -89,18 +89,9 @@ gsap.to("#promocion-text", {
   ease: "circ.easeInOut",
   scrollTrigger: {
     trigger: "#promocion-text",
-    start: "top-=600px center", // start when top of trigger target hits 50% point of viewport
+    start: "top-=600px center",
     toggleActions: "play pause play pause",
     end: "bottom+=600px center",
     markers: false,
   },
 });
-
-/*
-    gsap.to("#Inicio",{translateX:0,opacity:1, duration: 0.7, scrollTrigger: {
-        scroller: '.container',
-        trigger: ".panelProductos",
-        start:"top+=15% 50%",  // start when top of trigger target hits 50% point of viewport
-        toggleActions:"play play none reverse",
-        end: "bottom center",
-        markers:false}});*/

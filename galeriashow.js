@@ -1,3 +1,4 @@
+//Pictures object
 const galleryData = [
   {
     url: "img/docho.webp",
@@ -20,11 +21,13 @@ const Gallery = () => {
   const [index, setIndex] = React.useState(0);
   const [show, setShow] = React.useState(false);
 
+  //funtion that gets a number from a clicked event and opens the gallery with that image index
   function showImage(number) {
     setIndex(number);
     setShow("true");
   }
 
+  //funtion to add event listeners to the gallery images to open the single image gallery
   React.useEffect(() => {
     setTimeout(() => {
       let galleryImage = document.querySelectorAll(".galeria-img");
@@ -84,6 +87,7 @@ const Gallery = () => {
   }
 };
 const GallerySection = () => {
+  //depending on client width only show 3 or 5 images
   let sliceLimit =
     document.getElementsByTagName("Body")[0].clientWidth < 815 ? 3 : 5;
 

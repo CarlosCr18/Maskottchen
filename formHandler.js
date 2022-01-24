@@ -1,5 +1,5 @@
-//function submitFunction() {
-//}
+//form handler
+//when submitted uses axios and formsubmit.co to handle the data then depending on the result there is user feedback
 const form = document.getElementById("ContactForm");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -17,7 +17,7 @@ form.addEventListener("submit", function (event) {
         number: form.elements["number"].value,
         message: form.elements["message"].value,
       },
-      { timeout: 2000 }
+      { timeout: 3000 }
     )
     .then((response) => {
       console.log(response, "success");
