@@ -44,4 +44,5 @@ I faced a few challenges for this webpage in different aspects:
 
 ### What I would do different if I do it again
 
-I would get the right design and pictures down and ready first so building up the site takes less time.
+- I would get the right design and pictures down and ready first so building up the site takes less time.
+- I would use useContext hook to handle the languages
