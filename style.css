@@ -105,12 +105,12 @@ body {
   background-color: var(--color-neutral-light);
 
   overflow-x: hidden;
+  overflow-y: auto;
   font-family: var(--font-family-text);
   font-size: var(--font-size-text);
   color: var(--color-neutral-dark);
   z-index: -2;
   scroll-behavior: smooth;
-  scroll-snap-type: none;
 
   line-height: 1.3;
 }
@@ -160,7 +160,6 @@ a:hover {
 }
 
 .top-information {
-  scroll-snap-align: start end;
   width: 100%;
   height: 4rem;
 
@@ -201,6 +200,16 @@ a:hover {
 
   background: rgb(243, 243, 251);
   background: linear-gradient(
+    265deg,
+    rgba(243, 243, 251, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    265deg,
+    rgba(243, 243, 251, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
     265deg,
     rgba(243, 243, 251, 1) 0%,
     rgba(255, 255, 255, 1) 100%
@@ -309,6 +318,16 @@ a:hover {
     rgba(90, 129, 167, 0.779) 0%,
     rgb(60, 99, 137) 92%
   );
+  background: -webkit-linear-gradient(
+    265deg,
+    rgba(90, 129, 167, 0.779) 0%,
+    rgb(60, 99, 137) 92%
+  );
+  background: -moz-linear-gradient(
+    265deg,
+    rgba(90, 129, 167, 0.779) 0%,
+    rgb(60, 99, 137) 92%
+  );
   opacity: 0;
   color: #fff;
 
@@ -344,7 +363,6 @@ a:hover {
   padding: 2rem;
   background-color: #fff;
   background-image: url(img/background.png);
-  scroll-snap-align: start end;
 
   display: flex;
   flex-direction: column;
@@ -445,6 +463,16 @@ a:hover {
   color: var(--color-neutral-light);
   background: rgb(5, 98, 99);
   background: linear-gradient(
+    90deg,
+    rgba(5, 98, 99, 1) 0%,
+    rgba(23, 149, 74, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(5, 98, 99, 1) 0%,
+    rgba(23, 149, 74, 1) 100%
+  );
+  background: -moz-linear-gradient(
     90deg,
     rgba(5, 98, 99, 1) 0%,
     rgba(23, 149, 74, 1) 100%
@@ -556,7 +584,6 @@ a:hover {
   width: 100%;
   height: auto;
   padding: 0;
-  scroll-snap-align: start end;
 
   display: flex;
   flex-direction: column;
@@ -566,6 +593,16 @@ a:hover {
   background-color: var(--color-neutral-dark);
 
   background: linear-gradient(
+    -27deg,
+    var(--color-neutral-dark) 0%,
+    var(--color-neutral-black) 100%
+  );
+  background: -webkit-linear-gradient(
+    -27deg,
+    var(--color-neutral-dark) 0%,
+    var(--color-neutral-black) 100%
+  );
+  background: -moz-linear-gradient(
     -27deg,
     var(--color-neutral-dark) 0%,
     var(--color-neutral-black) 100%
@@ -762,7 +799,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  scroll-snap-align: start end;
 
   background-color: var(--color-neutral-light);
 }
@@ -938,7 +974,6 @@ footer {
   flex-direction: column;
   align-items: start;
   box-shadow: 0 0 2rem 2px rgba(0, 0, 0, 0.5);
-  scroll-snap-align: end;
 }
 
 .footer-links {
@@ -1196,14 +1231,6 @@ section {
     --font-size-text: 1rem;
   }
 
-  body {
-    scroll-snap-type: none;
-  }
-
-  body * {
-    scroll-snap-align: none;
-  }
-
   .header-container {
     position: fixed;
     inset: 0 30% 0 0%;
@@ -1315,8 +1342,7 @@ section {
   }
 
   .Acerca {
-    height: auto;
-    scroll-snap-align: center;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1342,9 +1368,8 @@ section {
   }
 
   .Servicios {
-    height: auto;
+    height: 100%;
     width: 100%;
-    scroll-snap-align: start end;
   }
 
   .Servicios-text {
