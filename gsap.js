@@ -79,19 +79,3 @@ gsap.to(".Galeria", {
   },
 });
 
-let promocionWidth =
-  document.getElementsByTagName("Body")[0].clientWidth < 815 ? "-100%" : "-75%";
-
-gsap.to("#promocion-text", {
-  x: promocionWidth,
-  duration: 10,
-  repeat: -1,
-  ease: "circ.easeInOut",
-  scrollTrigger: {
-    trigger: "#promocion-text",
-    start: "top-=600px center",
-    toggleActions: "play pause play pause",
-    end: "bottom+=600px center",
-    markers: false,
-  },
-});
